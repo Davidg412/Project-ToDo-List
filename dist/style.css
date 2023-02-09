@@ -1,0 +1,12 @@
+/*Overall Page Container*/
+#page-container {
+  display: grid;
+  grid-template-rows: 2fr 7fr 1fr;
+  grid-template-columns: 1fr 4fr;
+}
+
+/*Header of Page*/
+#header-container {
+  grid-area: 1 / 1 / 2 / 3;
+  grid-column-start: span 3;
+}
