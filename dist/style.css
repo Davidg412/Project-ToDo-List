@@ -1,7 +1,15 @@
+html {
+  /* footer support */
+  min-height: 100%;
+  background-color: #464444;
+}
+
 /*Overall Page Container*/
 #page-container {
   display: grid;
-  grid-template-rows: 2fr 7fr 1fr;
+  /*Container to take up the entire view*/
+  min-height: 100%;
+  grid-template-rows: 1.5fr 8fr .5fr;
   grid-template-columns: 1fr 4fr;
 }
 
@@ -9,4 +17,25 @@
 #header-container {
   grid-area: 1 / 1 / 2 / 3;
   grid-column-start: span 3;
+  background-color: #464444;
+  color: white;
+  align-self: center;
+  font-size: 3rem;
+  padding-left: .5em;
+}
+
+/*Project Container (Left Sidebar)*/
+#projects-container {
+  grid-column-start: span 2;
+  background-color: #dad6d3;
+  color:black;
+  font-size: 2rem;
+  padding-left: 1em;
+  font-weight: bold;
+}
+
+
+/*Body Container for Tasks*/
+#tasks-container {
+  background-color: #eeecea;
 }
