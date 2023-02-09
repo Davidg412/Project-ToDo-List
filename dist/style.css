@@ -1,5 +1,4 @@
 html {
-  /* footer support */
   min-height: 100%;
   background-color: #464444;
 }
@@ -7,10 +6,11 @@ html {
 /*Overall Page Container*/
 #page-container {
   display: grid;
-  /*Container to take up the entire view*/
-  min-height: 100%;
-  grid-template-rows: 1.5fr 8fr .5fr;
+  /*Container to take up the entire view. Max-height removed the overflow-Y scrollbar*/
+  max-height: 100%;
+  grid-template-rows: 1.5fr 8fr 0.5fr;
   grid-template-columns: 1fr 4fr;
+  position: ;
 }
 
 /*Header of Page*/
@@ -21,21 +21,28 @@ html {
   color: white;
   align-self: center;
   font-size: 3rem;
-  padding-left: .5em;
+  padding-left: 0.5em;
 }
 
 /*Project Container (Left Sidebar)*/
 #projects-container {
   grid-column-start: span 2;
+  grid-row-end: 3;
   background-color: #dad6d3;
-  color:black;
+  color: black;
   font-size: 2rem;
   padding-left: 1em;
   font-weight: bold;
 }
 
-
 /*Body Container for Tasks*/
 #tasks-container {
   background-color: #eeecea;
+  grid-area: 2 / 2 / 3 / 4;
+}
+
+/*Footer container (bottom of page)*/
+#footer-container {
+  background-color: #464444;
+  grid-area: 3 / 1 / 4 / span 3;
 }
