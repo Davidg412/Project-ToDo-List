@@ -32,7 +32,19 @@ html {
   color: black;
   font-size: 2rem;
   padding-left: 1em;
+  display: grid;
+  grid-template-rows: repeat(12, 1fr);
+}
+
+.projects-header {
   font-weight: bold;
+}
+
+/*Add Project Button*/
+.add-project {
+  font-size: 1.5rem;
+  width: auto;
+  background-color: #dad6d3;
 }
 
 /*Body Container for Tasks*/
