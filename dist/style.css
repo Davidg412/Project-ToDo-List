@@ -41,9 +41,23 @@ html {
 .general-agenda {
   font-size: 1.25rem;
   background-color: #dad6d3;
-  max-width: 85%;
-  max-height: 75%;
   border-style: none;
+  border-radius: 25px;
+  min-width: 65%;
+}
+
+.general-agenda:hover {
+  background-color: #afadad;
+  border-style: double;
+}
+.general-agenda:active {
+  background-color: #afadad;
+  border-style: double;
+  font-weight: bold;
+}
+.general-agenda:focus {
+  background-color: #afadad;
+  font-weight: bold;
 }
 
 .projects-header {
@@ -54,8 +68,16 @@ html {
 .add-project {
   font-size: 1.5rem;
   background-color: #dad6d3;
-  min-width: 80%;
-  max-height: 100%;
+  min-width: 60%;
+}
+
+.add-project:hover {
+  background-color: #afadad;
+}
+
+.add-project:active {
+  background-color: #afadad;
+  font-weight: bold;
 }
 
 /*Body Container for Tasks*/
