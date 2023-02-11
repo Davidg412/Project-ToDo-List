@@ -9,7 +9,7 @@ html {
   /*Container to take up the entire view. Max-height removed the overflow-Y scrollbar*/
   max-height: 100%;
   grid-template-rows: 1.5fr 8fr 0.5fr;
-  grid-template-columns: 1fr 4fr;
+  grid-template-columns: 1fr 5fr;
   position: ;
 }
 
@@ -33,19 +33,29 @@ html {
   font-size: 2rem;
   padding-left: 1em;
   display: grid;
-  grid-template-rows: repeat(12, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  align-items: end;
+  justify-items: start;
+}
+
+.general-agenda {
+  font-size: 1.25rem;
+  background-color: #dad6d3;
+  max-width: 85%;
+  max-height: 75%;
+  border-style: none;
 }
 
 .projects-header {
   font-weight: bold;
+  align-self: end;
 }
 
-/*Add Project Button*/
 .add-project {
   font-size: 1.5rem;
-  width: auto;
   background-color: #dad6d3;
-  max-width: 75%;
+  min-width: 80%;
+  max-height: 100%;
 }
 
 /*Body Container for Tasks*/
