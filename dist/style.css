@@ -45,6 +45,7 @@ html {
   font-size: 1.5rem;
   width: auto;
   background-color: #dad6d3;
+  max-width: 75%;
 }
 
 /*Body Container for Tasks*/
