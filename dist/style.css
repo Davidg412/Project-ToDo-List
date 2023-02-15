@@ -24,7 +24,7 @@ html {
   padding-left: 0.5em;
 }
 
-/*Project Container (Left Sidebar)*/
+/*********************Project Container (Left Sidebar)***************************/
 #projects-container {
   grid-column-start: span 2;
   grid-row-end: 3;
@@ -80,7 +80,27 @@ html {
   font-weight: bold;
 }
 
-/*Body Container for Tasks*/
+.new-entry {
+  font-size: 1.5rem;
+  background-color: white;
+  max-width: 70%;
+}
+
+.buttons-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.add-button {
+  background-color: rgb(123, 214, 101);
+  min-width: 50%;
+}
+.cancel-button {
+  background-color: rgb(243, 89, 89);
+  min-width: 64%;
+}
+
+/*************************Body Container for Tasks*********************************/
 #tasks-container {
   background-color: #eeecea;
   grid-area: 2 / 2 / 3 / 4;
