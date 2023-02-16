@@ -1,22 +1,29 @@
 import {
   hideElement,
+  showElementFlex,
+  showElementBlock,
   addProjectButton,
-  newProjectEntry,
   projectsContainer,
-  displayElement,
-  addButton,
+  appendElement,
+  selectElement,
   cancelButton,
-  buttonsContainer,
 } from "./dom";
 
 //Function to Add a project
 export const addProject = () => {
   addProjectButton.selector.addEventListener("click", () => {
     hideElement(".add-project");
+    showElementBlock(".new-entry");
     //Display input-box & buttons
-    displayElement(projectsContainer.selector, newProjectEntry.element);
-    displayElement(projectsContainer.selector, buttonsContainer.element);
-    displayElement(buttonsContainer.element, addButton.element);
-    displayElement(buttonsContainer.element, cancelButton.element);
+    const buttonsContainer = selectElement(".buttons-container");
+    appendElement(projectsContainer.selector, buttonsContainer.selector);
+    showElementFlex(".buttons-container");
+
+    //If cancel button is clicked
+    cancelButton.selector.addEventListener("click", () => {
+      hideElement(".buttons-container");
+      hideElement(".new-entry");
+      showElementBlock(".add-project");
+    });
   });
 };

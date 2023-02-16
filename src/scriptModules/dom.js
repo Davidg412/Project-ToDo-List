@@ -28,8 +28,21 @@ export const hideElement = (attribute) => {
   return { element };
 };
 
+//Display DOM content
+export const showElementFlex = (attribute) => {
+  const element = (document.querySelector(attribute).style.display = "flex");
+
+  return { element };
+};
+
+export const showElementBlock = (attribute) => {
+  const element = (document.querySelector(attribute).style.display = "block");
+
+  return { element };
+};
+
 //Append elements
-export const displayElement = (parent, child) => {
+export const appendElement = (parent, child) => {
   const display = parent.appendChild(child);
 
   return { display };
@@ -41,30 +54,7 @@ export const addProjectButton = selectElement(".add-project");
 
 export const projectsContainer = selectElement("#projects-container");
 
-//New Project entry
-export const newProjectEntry = elementFactory(
-  "input",
-  { class: "new-entry" },
-  ""
-);
+//export const addButton = selectElement(".add-button");
 
-//Parent Div for Cancel/Add Buttons
-export const buttonsContainer = elementFactory(
-  "div",
-  { class: "buttons-container" },
-  ""
-);
+export const cancelButton = selectElement(".cancel-button");
 
-//Add Button
-export const addButton = elementFactory(
-  "button",
-  { class: "add-button" },
-  "Add"
-);
-
-//Cancel Button
-export const cancelButton = elementFactory(
-  "button",
-  { class: "cancel-button" },
-  "Cancel"
-);
